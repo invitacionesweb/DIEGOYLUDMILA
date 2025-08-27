@@ -1,0 +1,685 @@
+:root {
+    --color-principal:#faf9f7;
+    --color-secundario:#959A80;
+    --color-terciario:#959A80;
+ 
+    --font-principal:'Montserrat', sans-serif;
+    --font-secundaria:'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--color-principal);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 320px;
+    overflow-x: unset;
+
+}
+
+body p {
+    font-family: var(--font-secundaria);
+    padding: 0;
+    font-size: 1.1rem;
+
+
+}
+
+body h2 {
+    font-family: var(--font-principal);
+    padding: 0;
+}
+/*BANNER INICIAL */
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./imgs/DESKTOPCLASICO.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax {
+    position: relative;
+    height: 100vh; /* Ocupa toda la pantalla */
+    background-image: url(./imgs/DESKTOPCLASICO.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+.frenteflores a {
+margin-top: 60px;
+}
+.titulocontador {
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin: 0;
+}
+/* TODO AUIDO */
+.audiodiv {
+    position: fixed;
+    TOP: 20px;
+    right: 20px;
+    background-color: var(--color-terciario);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: bounce;
+    animation-duration:2s;
+    animation-iteration-count: unset;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.audiodiv img {
+    padding: 3px 0 0 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+}
+.play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Ocultar los controles nativos del audio */
+audio::-webkit-media-controls {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-panel {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-play-button {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-start-playback-button {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-enclosure {
+    display:none !important;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    display:none !important;
+}
+ 
+/*COUNTER*/
+.contador {
+    
+    display: flex;
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+    justify-content: center;
+    padding: 30px 0;
+    margin: 0;
+  }
+
+.bloque {
+    text-align: center;
+    margin: 0 10px; /* Añadido espacio entre bloques para mejorar la apariencia */
+    }
+
+.numero {
+    font-size: 3em;
+    font-weight: 400;
+    }
+
+.etiqueta {
+    font-size: 1.2em;
+    font-family: var(--font-principal);
+    }
+    .arrowdoble {
+        width: 60px;
+        margin: auto;
+        margin-top:-90px;
+        display: block;
+        animation: bounce;
+        animation-duration:5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-30px);
+        }
+        60% {
+            transform: translateY(-15px);
+        }
+    }
+
+.boton {
+    border: 1px solid var(--color-principal);
+    background-color: var(--color-terciario);
+    color: var(--color-principal);
+    padding: 10px 30PX;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: var(--font-principal);
+    border-radius: 50px;
+
+}
+.boton:hover {
+    color: var(--color-terciario);
+    background-color: var(--color-principal);
+    border: 1px solid var(--color-terciario);
+    padding: 10px 30PX;
+    text-align: center;
+    text-decoration: none;
+}
+.boton1 {
+    border: 1px solid var(--color-principal);
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    padding: 10px 30PX;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: var(--font-principal);
+    border-radius: 50px;
+
+
+}
+.boton1:hover {
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-principal);
+    padding: 10px 30PX;
+    text-align: center;
+    text-decoration: none;
+}
+
+.lovestory {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin: auto;
+    text-align: center;
+    background-image: url(./imgs/box.png); /* Cambia la imagen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-terciario);
+}
+.lovestorybox {
+    margin: auto;
+    max-width: 1200px;
+    padding: 30px;
+}
+.lovestorybox  p {
+    padding:2.5px 20px 2.5px 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.3;
+
+}
+.ubicacion {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   padding: 20px 0;
+   gap: 10px;
+   background-image: url(./imgs/box.png); /* Cambia la imagen */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.ubicacion-bloque {
+    width: 100%;
+    text-align: center;
+    padding: 0px 0 20px 0;
+    color: var(--color-terciario);
+}
+.ubicacion-bloque h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    font-weight: bolder;
+   
+}
+.ubicacion-bloque p {
+    padding:10px 20px 40px 20px;
+    max-width: 400px;
+    margin: auto;
+    font-size: 1.2rem;
+
+}
+.ubicacion-bloque .datos {
+    width: 86VW;
+    max-width: 660PX;
+    margin: auto;
+    padding: auto;
+}
+.ubicacion .icon {
+    width: 80px;
+}
+.icon {
+    width: 80px;
+    
+}
+.galeria1 {
+    width: 100%;
+   
+    display: flex;
+      gap: 2px;
+    
+}
+.galeria1 img {
+    width: 25vw;
+  
+
+}
+
+/*TIMELINE*/
+.timeline {
+    margin: 0px 0 0 0;
+    padding: 16px 0;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./imgs/box.png); /* Cambia la imagen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+.timeline img {
+    width: 220px;
+    padding: auto;
+    margin: auto;
+}
+.timeline .iconos {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+}
+.iconos-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.iconos-block img {
+    width: 60px;
+}
+.iconos-block p {
+    padding: 0;
+    margin: 0;
+    color: var(--color-secundario);
+}
+
+
+/*FORMS*/
+.forms {
+    background-color: var(--color-secundario);
+    text-align: center;
+    padding: 40px 0 40px 0;
+}
+
+.forms h2 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.2em;
+    padding: 10px 0 0 0;
+    margin: 0;
+    color: var(--color-principal);
+}
+.forms p {
+    font-size: 1.1em;
+    padding: 10px 0 20px 0;
+    margin: 0;
+    color: var(--color-principal);
+}
+.information-bloque .botones {
+    width: 140px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+    gap: 10px;
+}
+.information-bloque .botones a {
+    width: 100px;
+}
+label .grupo-opciones {
+    font-family: var(--font-secundaria);
+    color: var(--color-principal);
+}
+.formulario {
+    max-width: 500px;
+  width: 90vw;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.formulario .formtitle {
+    font-family: var(--font-secundaria);
+    color: var(--color-principal);
+ font-size: 1.4em;
+     padding: 0;
+    margin: 0;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  padding: 0 25%;
+  justify-content: start;
+  gap: 100px;
+  font-size: 1.2em;
+}
+
+.grupo-opciones{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap:0px;
+  padding: 0;
+  margin: 0;
+}
+
+.radio-option {
+  display: flex;
+  width: 10px;
+  align-items: center;
+  font-family: var(--font-secundaria); /* Cambiá esto por el nombre real de tu fuente secundaria */
+  color: var(--color-principal); /* Este es tu color principal, definilo antes o reemplazalo por un valor hex como #A3A87B */
+  font-size: 1em;
+  gap: 6px;
+}
+
+.radio-option input[type="radio"] {
+  accent-color:#000000; /* Cambia el color del círculo si el navegador lo soporta */
+}
+.etiqueta {
+    font-family: var(--font-secundaria);
+    padding: 0;
+    margin: 0;
+}
+.formulario {
+    padding: 0 auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.formulario input,
+.formulario select,
+.formulario textarea {
+  background-color: var(--color-principal);
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #a3a49d;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+  color: var(--gris-placeholder);
+}
+
+.formulario textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.forms .boton {
+    font-size: 1em;
+}
+
+.dresscode {
+    width: 100%;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    text-align: center;
+    padding: 40px 0;
+}
+.dresscode h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+}
+.dresscode p {
+    padding:6px 40px 6px 40px;
+    font-size: 1em;
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+
+}
+.galeria2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.galeria2 img {
+    width: 25vw;
+}
+
+
+.caja {
+    background-image: url(./imgs/box.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dos { 
+    width: 100%;
+    padding: 30px 0;
+    gap: 10px;
+    background-color:var(--color-principal);
+    max-width: 500px;
+    margin: 50px 0 50px 0;
+    border-radius: 20px;
+    
+}
+.dos p { 
+    max-width: 500px;
+    padding: 0PX 30px;
+    text-align: center;
+    margin: auto;
+    max-width: 400px;
+    font-size: 1.2rem;
+
+}
+.tres { 
+    width: 100%;
+    padding: 60px 0;
+    gap: 10px;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+
+}
+.tres p { 
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    font-size: 1.2rem;
+
+}
+
+.rsvpbotones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+footer .contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+footer img {
+    width: 60px;
+}
+.contenido ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding:0 20px 20px 20px;
+    margin: 0;
+
+}
+
+.contenido a {
+    color: var(--color-principal);
+}
+.contenido a:hover {
+    color: var(--color-secundario);
+}
+
+.end {
+    background-image: url(./img/fondonombres.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height:auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+  
+.end-names img{
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    padding: 0;
+    margin: 0;
+   
+}
+
+@media (max-width: 600px) {
+    header {
+        width: 100%;
+        height: 100vh;
+        background-image: url(./imgs/PHONECLASICO.png); /* Cambia la imagen */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .parallax {
+        position: relative;
+        height: 100vh; /* Ocupa toda la pantalla */
+        background-image: url(./imgs/PHONECLASICO.png); /* Cambia la imagen */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    
+    .ubicacion {
+        flex-direction: column;
+    }
+    .frenteflores {
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        unicode-bidi: isolate;
+        display: flex;
+        
+    }
+    .lovestorybox{
+        margin: 20px 10px;
+    }
+        .galeria1 {
+            width: 100%;
+            display: grid;
+            grid-template-columns:1fr;
+        }
+        .f2, .f4  {
+            display: none;
+        }
+    
+        .galeria1 img {
+            width: 100vw;
+        }
+        .galeria2 {
+            width: 100%;
+            display: grid;
+            grid-template-columns:1fr 1fr;
+        }
+    
+        .galeria2 img {
+            width: 50vw;
+        }
+
+ 
+.timeline .iconos {
+    flex-direction: column;
+    
+}
+.timeline p {
+    font-size: 1.3rem;
+
+}
+        .rsvpbotones {
+            flex-direction: column;
+            padding: 0 60px;
+        }
+
+        .rsvpbotones .boton1 {
+            width: 140px;
+            margin: auto;
+        }
+
+        
+    }
